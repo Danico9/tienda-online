@@ -1,0 +1,22 @@
+{
+  "name": "tienda-online/proyecto",
+  "description": "Sistema CRUD de productos para tienda online",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "ramsey/uuid": "^4.7",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "config\\": "src/config/",
+      "models\\": "src/models/",
+      "services\\": "src/services/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}

@@ -1,0 +1,20 @@
+# Generado automaticamente por el IDE
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Añadido por mi:
+
+# Dependencias de Composer
+/vendor/
+
+# Archivos de usuarios
+/uploads/
+
+# Configuración del IDE
+.idea/
