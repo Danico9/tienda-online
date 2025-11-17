@@ -10,11 +10,11 @@ El proyecto implementa una arquitectura por capas con separación de responsabil
 
 ## Tecnologías Utilizadas
 
-- **PHP 8.0+** - Lenguaje de programación backend
+- **PHP 8.2.12** - Lenguaje de programación backend
 - **MySQL 8.0** - Sistema de gestión de base de datos
-- **Apache 2.4** - Servidor web (incluido en XAMPP)
+- **Apache 2.4.58** - Servidor web (incluido en XAMPP)
 - **Bootstrap 5.1.3** - Framework CSS para diseño responsive
-- **Composer 2.x** - Gestor de dependencias
+- **Composer 2.9.1** - Gestor de dependencias
 - **PDO** - Capa de abstracción para acceso a base de datos
 
 ### Dependencias (instaladas vía Composer)
@@ -156,9 +156,23 @@ Si el comando `composer` no es reconocido en Windows:
 2. Si persiste, verifica que la ruta de Composer esté en las variables de entorno PATH
 3. Reinicia el ordenador si es necesario
 
+**Ejecutar Composer Install**
+Una vez instalado Composer, se debe instalar las dependencias del proyecto.
+1. Abre una terminal en la carpeta raíz del proyecto y ejecuta:
+
+composer install
+
+2. Descargará automáticamente todas las librerías definidas en composer.json
+3. Creará la carpeta vendor/:
+4. Generará el archivo vendor/autoload.php, necesario para cargar las dependencias
+
+Si más adelante se añaden nuevas dependencias o descargas el proyecto de nuevo, simplemente vuelve a ejecutar:
+composer install
+
+
 ## Instalación
 
-### 1. Clonar o descargar el repositorio
+### 1. Clonar o descargar el repositorio (IMPORTANTE, TIENE QUE SER DENTRO DE LA CARPETA XAMPP)
 ```bash
 git clone https://github.com/Danico9/tienda-online
 cd tienda-online
@@ -335,8 +349,7 @@ Implementado en `Config.php` y `SessionService.php` para garantizar una única i
 - Panel de administración más completo con estadísticas
 - Exportación de productos a CSV/PDF
 - Implementar tests unitarios con PHPUnit
-- Migración a framework PHP (Laravel/Symfony)
-- API RESTful para integración con aplicaciones móviles
+- Migración a framework PHP (Laravel)
 
 ## Autor
 
@@ -349,15 +362,9 @@ Estudiante de 2º DAW Semipresencial - IES Juan de Garay, Valencia
 
 ## Licencia
 
-Este proyecto ha sido desarrollado con fines educativos para el módulo de Programación en Entorno Servidor.
+Este proyecto ha sido desarrollado con fines educativos.
 
-Código disponible bajo licencia MIT - Uso educativo.
-
-## Agradecimientos
-
-- Profesores del IES Juan de Garay por la orientación durante el desarrollo
-- Documentación oficial de PHP, MySQL y Bootstrap
-- Comunidad de Stack Overflow por recursos y soluciones
+Código disponible bajo licencia Uso educativo.
 
 ---
 
