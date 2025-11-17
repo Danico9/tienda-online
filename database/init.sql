@@ -65,9 +65,9 @@ CREATE TABLE usuarios (
 
 -- Datos usuarios (contraseñas: admin=Admin1, user=User1234, test=test1234)
 INSERT INTO usuarios (username, password, nombre, apellidos, email) VALUES
-                                                                        ('admin', '$2a$10$vPaqZvZkz6jhb7U7k/V/v.5vprfNdOnh4sxi/qpPRkYTzPmFlI9p2', 'Admin', 'Administrador', 'admin@admin.com'),
-                                                                        ('user', '$2a$12$RUq2ScW1Kiizu5K4gKoK4OTz80.DWaruhdyfi2lZCB.KeuXTBh0S.', 'User', 'Usuario Normal', 'user@user.com'),
-                                                                        ('test', '$2a$10$Pd1yyq2NowcsDf4Cpf/ZXObYFkcycswqHAqBndE1wWJvYwRxlb.Pu', 'Test', 'Test Usuario', 'test@test.com');
+                                                                        ('admin', '$2y$10$/0wnAfzlrO5a9zVFeZJJqunnSGJwPPhDAkl.kR5sktmDcusNO0P3e', 'Admin', 'Administrador', 'admin@admin.com'),
+                                                                        ('user', '$2y$10$F.hkI0d6lLi7whmY/bl4Bulrh05YDVgwXhfdAoZ8sT7uqR845GAim', 'User', 'Usuario Normal', 'user@user.com'),
+                                                                        ('test', '$2y$10$fSTzezvv1DMcW1QTi460DOKl79QF90geoW.SgawB6MstXkcO/pW4O', 'Test', 'Test Usuario', 'test@test.com');
 
 -- Tabla user_roles
 CREATE TABLE user_roles (
