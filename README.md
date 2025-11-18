@@ -1,6 +1,6 @@
 # Tienda Online - Sistema CRUD de Productos
 
-Sistema de gestión de productos desarrollado en PHP puro para el módulo de Programación en Entorno Servidor del ciclo de 2º DAW Semipresencial en el IES Juan de Garay.
+Sistema de gestión de productos desarrollado en PHP puro para asignatura Desarrollo Web en Entorno Servidor del ciclo de 2º DAW Semipresencial en el IES Juan de Garay.
 
 ## Descripción del Proyecto
 
@@ -157,10 +157,12 @@ Si el comando `composer` no es reconocido en Windows:
 3. Reinicia el ordenador si es necesario
 
 **Ejecutar Composer Install**
+
 Una vez instalado Composer, se debe instalar las dependencias del proyecto.
 1. Abre una terminal en la carpeta raíz del proyecto y ejecuta:
-
+```bash
 composer install
+```
 
 2. Descargará automáticamente todas las librerías definidas en composer.json
 3. Creará la carpeta vendor/:
