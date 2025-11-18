@@ -250,6 +250,21 @@ Para acceder a las funcionalidades de administración, haz clic en "Iniciar Sesi
 | user | User1234 | USER | Solo lectura (ver listado y detalles) |
 | test | test1234 | USER | Solo lectura |
 
+Si quisiera crear un usuario nuevo:
+
+```
+-- Generar hash contraseña
+php -r "echo password_hash('prueba', PASSWORD_BCRYPT);"
+
+-- Crear usuario prueba con contraseña prueba
+INSERT INTO usuarios (username, password, nombre, apellidos, email)
+VALUES ('prueba', '$2y$10$IJojCU9Z4wKtpnfl9S4OR.wQJ02YCqkfK1P.Nm9eAy.6tEQJJ9Naq', 'Daniel', 'Danientest', 'email@test.com');
+
+-- Asignar roles
+SET @user_id = LAST_INSERT_ID();
+INSERT INTO user_roles (user_id, roles) VALUES (@user_id, 'USER');
+```
+
 ### Funcionalidades según rol
 
 **Usuario regular (USER):**
