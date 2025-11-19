@@ -105,7 +105,7 @@ class Config
     }
 
     /**
-     * Métodos mágicos para acceder a propiedades
+     * Métodos para acceder a propiedades
      */
     public function __get($name)
     {
@@ -120,16 +120,6 @@ class Config
     /**
      * Métodos auxiliares
      */
-    public function getEnv($key, $default = null)
-    {
-        return $_ENV[$key] ?? $default;
-    }
-
-    public function isProduction(): bool
-    {
-        return ($_ENV['APP_ENV'] ?? 'production') === 'production';
-    }
-
     public function isDevelopment(): bool
     {
         return ($_ENV['APP_ENV'] ?? 'development') === 'development';

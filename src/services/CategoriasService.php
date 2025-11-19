@@ -27,9 +27,13 @@ class CategoriasService
     // Retorna un array de objetos Categoria
     public function findAll()
     {
+        // Prepara consulta SQL
         $stmt = $this->pdo->prepare("SELECT * FROM categorias ORDER BY nombre ASC");
+
+        // Ejecuta la consulta
         $stmt->execute();
 
+        // Preparar array para guardar resultados
         $categorias = [];
         // Convierte cada fila en un objeto Categoria
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -40,9 +44,11 @@ class CategoriasService
                 $row['updated_at'],
                 $row['is_deleted']
             );
+            // Agregar el objeto al array
             $categorias[] = $categoria;
         }
 
+        // Se devuelve el array de objetos categoria
         return $categorias;
     }
 

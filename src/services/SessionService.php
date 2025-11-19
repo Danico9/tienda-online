@@ -65,10 +65,15 @@ class SessionService
     // Establece variables de sesión con datos del usuario y roles
     public function login($user)
     {
+        // Marca al usuario autentificado
         $_SESSION['loggedIn'] = true;
+        // Guarda el id del usuario
         $_SESSION['userId'] = $user->id;
+        // Guarda el nombre del usuario
         $_SESSION['username'] = $user->username;
+        // Verifica si es admin
         $_SESSION['isAdmin'] = in_array('ADMIN', $user->roles);
+        // Guarda la fecha y hora actual
         $_SESSION['loginTime'] = date('Y-m-d H:i:s');
     }
 
@@ -76,7 +81,9 @@ class SessionService
     // Elimina todos los datos de sesión y destruye la sesión
     public function logout()
     {
+        // Limpia todas las variables de $_SESSION
         session_unset();
+        // Destruye el archivo de sesión en el servidor
         session_destroy();
     }
 

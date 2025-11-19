@@ -63,6 +63,7 @@ if ($file['size'] > 2 * 1024 * 1024) {
 
 // Valida que el archivo es una imagen JPG o PNG
 $allowedTypes = ['image/jpeg', 'image/png'];
+// Lee el archivo temporal, detectando el tipo que es
 $fileType = mime_content_type($file['tmp_name']);
 
 if (!in_array($fileType, $allowedTypes)) {

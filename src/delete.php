@@ -31,6 +31,7 @@ if (!$id) {
     exit;
 }
 
+// Inicializar servicios
 $config = Config::getInstance();
 $productosService = new ProductosService($config->db);
 
@@ -39,6 +40,8 @@ $producto = $productosService->findById($id);
 
 if ($producto) {
     // Elimina la imagen física del servidor si no es la por defecto
+    // strpos devuelve 0 si la subcadena no está al principio ( es decir, que no encuentra placeholder.com) y por lo tanto extraería con
+    // basename el nombre del archivo en la ruta con imagePath, y luego verifica que existe y lo elimina con unlink
     if ($producto->imagen && strpos($producto->imagen, 'placeholder.com') === false) {
         $imagePath = $config->uploadPath . basename($producto->imagen);
         if (file_exists($imagePath)) {

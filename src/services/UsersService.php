@@ -30,6 +30,7 @@ class UsersService
     // Lanza Exception si las credenciales son incorrectas
     public function authenticate($username, $password): User
     {
+        // Buscar usuario por username
         $user = $this->findUserByUsername($username);
 
         // Verifica que el usuario existe y la contraseña es correcta
@@ -58,6 +59,7 @@ class UsersService
 
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        // Usuario no existe
         if (!$row) {
             return null;
         }

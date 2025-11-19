@@ -23,6 +23,7 @@ $session = SessionService::getInstance();
 
 // Control de acceso: solo administradores pueden crear productos
 if (!$session->isAdmin()) {
+    // Redirigimos a inicio
     header('Location: /tienda-online/src/index.php');
     exit;
 }
@@ -38,6 +39,7 @@ $success = false;
 // Procesa el formulario al enviar
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Sanitiza y valida los datos recibidos
+    //                              Origen         Campo            Filtro
     $marca = filter_input(INPUT_POST, 'marca', FILTER_SANITIZE_STRING);
     $modelo = filter_input(INPUT_POST, 'modelo', FILTER_SANITIZE_STRING);
     $descripcion = filter_input(INPUT_POST, 'descripcion', FILTER_SANITIZE_STRING);
